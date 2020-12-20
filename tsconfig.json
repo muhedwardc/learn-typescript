@@ -70,9 +70,9 @@
   // "exclude": [
   //   "node_modules" // would be the default
   // ],
-  "include": [
-    "src/types/basics.ts"
-  ],
+  // "include": [
+  //   "src/types/basics.ts"
+  // ],
   // "files": [
   //   "compile/app.ts" // only for specific file
   // ]

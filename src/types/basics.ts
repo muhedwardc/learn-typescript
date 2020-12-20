@@ -1,4 +1,4 @@
-function add(a: number, b: number, isSquareResult: boolean, pre: string): string {
+function basicAdd(a: number, b: number, isSquareResult: boolean, pre: string): string {
     let result = a + b;
 
     if (isSquareResult) {
@@ -8,8 +8,8 @@ function add(a: number, b: number, isSquareResult: boolean, pre: string): string
     return !!pre ? `${pre} ${result}` : ''+result;
 }
 
-const n1 = 5, n2 = 2;
+const basicN1 = 5, basicN2 = 2;
 
-const result = add(n1, n2, true, 'Result is:');
+const result = basicAdd(basicN1, basicN2, true, 'Result is:');
 
 console.log(result);

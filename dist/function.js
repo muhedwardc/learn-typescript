@@ -1,29 +1,22 @@
-function fnAdd(a: number, b: number): number {
+"use strict";
+function fnAdd(a, b) {
     return a + b;
 }
-
-function printResult(num: number): void {
+function printResult(num) {
     console.log('Result: ' + num);
 }
-
 printResult(fnAdd(1, 2));
-
-let combineVal: (a: number, b: number) => number;
-
+var combineVal;
 combineVal = fnAdd;
-
 printResult(combineVal(3, 4));
-
 // function addAndThen(a: number, b: number, cb: Function) {
 //     const result = a + b;
 //     cb(result);
 // }
-
-function addAndThen(a: number, b: number, cb: (res: number) => void) {
-    const result = a + b;
+function addAndThen(a, b, cb) {
+    var result = a + b;
     cb(result);
 }
-
-addAndThen(11, 2, res => {
+addAndThen(11, 2, function (res) {
     console.log(res);
 });
