@@ -1,1 +1,3 @@
-my typescript learning archive
+#Typescript learning archive :D
+
+handbook: https://www.typescriptlang.org/docs/handbook/intro.html
