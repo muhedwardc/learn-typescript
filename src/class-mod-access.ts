@@ -4,8 +4,9 @@ class Person {
     private hobbies: string[] = [];
 
     constructor(
+        private readonly id: number,
         public firsName: string, 
-        public lastName: string
+        public lastName: string,
     ) {
         // this.firstName = f;
         // this.lastName = l;
@@ -22,9 +23,14 @@ class Person {
     getHobbiesStr() {
         return this.hobbies.join(', ');
     }
+
+    changeId(newId: number): void {
+        // this.id = newId; // will fail, id is readonly
+    }
 }
 
-const newPerson = new Person('Edward', 'Chakim');
+const newPerson = new Person(0, 'Edward', 'Chakim');
+
 newPerson.addHobby('running (i wish)');
 newPerson.addHobby('eating');
 newPerson.getHobbiesStr(); // return 'running (i wish), eating'
