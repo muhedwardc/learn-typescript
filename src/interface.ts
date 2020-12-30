@@ -10,6 +10,7 @@ interface GenderInterface {
 interface PersonInterface extends GenderInterface {
     name: string;
     age: number;
+    job?: string; // optional
     greet(phrase: string): string;
 }
 
@@ -24,14 +25,14 @@ person1 = {
 
 // person1.greet('Hello world!'); 
 
-interface FullName {
-    firstName: string;
-    lastName: string;
-    getFullName(phrase: string): string;
-}
-
 class PersonClass implements PersonInterface, GenderInterface {
-    constructor(public name: string, public age: number, public gender: GenderEnum, public greet: (phrase: string) => string) {}
+    job?: string;
+
+    constructor(public name: string, public age: number, public gender: GenderEnum, public greet: (phrase: string) => string, job?: string) {
+        if (job) {
+            this.job = job;
+        }
+    }
 
     greetPerson(this: PersonClass, prefix: string) {
         return `${prefix} ${this.greet(this.name)}`
@@ -40,3 +41,12 @@ class PersonClass implements PersonInterface, GenderInterface {
 
 const person1Class = new PersonClass('Edward', 22, GenderEnum.male, (phrase: string) => phrase);
 console.log(person1Class.greetPerson('Hello'));
+
+interface GreetFn {
+    (phrase: string, name: string): string
+}
+
+let greetMe: GreetFn;
+greetMe = (prhase: string, name: string) => {
+    return `${prhase} ${name}`;
+}
