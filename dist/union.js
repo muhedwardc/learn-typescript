@@ -12,3 +12,4 @@ console.log({
     resultNum: resultNum,
     resultStr: resultStr
 });
+//# sourceMappingURL=union.js.map

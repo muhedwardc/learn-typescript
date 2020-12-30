@@ -12,3 +12,4 @@ function generateError(message, errorCode) {
     throw { message: message, errorCode: errorCode };
 }
 generateError('Error!!!', 500);
+//# sourceMappingURL=uknown-any-never.js.map

@@ -16,3 +16,4 @@ var burger = {
 };
 var burgerIngredients = burger.ingredients.join(', ');
 console.log(burgerIngredients);
+//# sourceMappingURL=obj-array-tuple-enum.js.map
