@@ -27,3 +27,9 @@ function addAndThen(a: number, b: number, cb: (res: number) => void) {
 addAndThen(11, 2, res => {
     console.log(res);
 });
+
+const powerNumber = (a: number, power: number = 2): number => {
+    return Math.pow(a, power);
+}
+
+console.log(powerNumber(2));
