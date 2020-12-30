@@ -1,11 +1,14 @@
 class Person {
-    firstName: string;
-    public /* default*/ lastName: string;
+    // firstName: string;
+    // public /* default*/ lastName: string;
     private hobbies: string[] = [];
 
-    constructor(f: string, l: string) {
-        this.firstName = f;
-        this.lastName = l;
+    constructor(
+        public firsName: string, 
+        public lastName: string
+    ) {
+        // this.firstName = f;
+        // this.lastName = l;
     }
 
     fullName(this: User /* this should refer to User */): string {
