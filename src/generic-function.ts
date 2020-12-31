@@ -1,4 +1,4 @@
-function merge<T, U>(obj1: T, obj2: U) {
+function merge<T extends object, U extends object>(obj1: T, obj2: U) {
     return Object.assign(obj1, obj2);
 }
 
@@ -11,3 +11,5 @@ const mergedData = merge(
 )
 
 console.log(mergedData.name);
+
+// const mergedDataInvalid = merge({name: 'Edward'}, 20); // passing number as non object will fail
