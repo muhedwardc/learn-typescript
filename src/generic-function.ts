@@ -31,3 +31,10 @@ function countAndDesc<T extends Lengthy>(element: T): [T, string] {
 // console.log(countAndDesc(10)) // number has no length prop
 console.log(countAndDesc('Hi!'));
 console.log(countAndDesc(['Test', 'Bos']));
+
+function extractAndConvert<T extends object, U extends keyof T>(obj: T, key: U) {
+    return `Value: ` + obj[key];
+}
+
+// extractAndConvert({}, 'name'); // object has no name property
+extractAndConvert({name: 'Edward'}, 'name');
